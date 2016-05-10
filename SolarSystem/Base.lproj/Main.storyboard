@@ -64,10 +64,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MiU-9d-IuC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MiU-9d-IuC">
                                 <rect key="frame" x="180" y="90" width="240" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="mOh-BO-new"/>
+                                    <constraint firstAttribute="width" constant="240" id="m6R-VU-OOK"/>
+                                    <constraint firstAttribute="height" constant="128" id="n9h-fY-CI8"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diameter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhH-Cm-D7R">
@@ -91,17 +92,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MiU-9d-IuC" firstAttribute="centerX" secondItem="GhH-Cm-D7R" secondAttribute="centerX" id="6Gz-0w-NeV"/>
-                            <constraint firstItem="GhH-Cm-D7R" firstAttribute="centerY" secondItem="6ZY-Z7-QGE" secondAttribute="centerY" constant="-19.5" id="JEP-gt-q3X"/>
-                            <constraint firstItem="9Q1-tn-5tT" firstAttribute="centerX" secondItem="6ZY-Z7-QGE" secondAttribute="centerX" id="ULZ-2G-g5W"/>
-                            <constraint firstItem="GhH-Cm-D7R" firstAttribute="centerX" secondItem="6ZY-Z7-QGE" secondAttribute="centerX" id="gAL-Hj-lAg"/>
-                            <constraint firstItem="nAa-iS-sfa" firstAttribute="top" secondItem="GhH-Cm-D7R" secondAttribute="bottom" constant="24" id="kfa-93-qE8"/>
-                            <constraint firstItem="nAa-iS-sfa" firstAttribute="centerX" secondItem="6ZY-Z7-QGE" secondAttribute="centerX" id="kvn-am-TM2"/>
-                            <constraint firstItem="MiU-9d-IuC" firstAttribute="top" secondItem="WGr-SK-RAk" secondAttribute="bottom" constant="26" id="nU0-mG-7mO"/>
-                            <constraint firstItem="MiU-9d-IuC" firstAttribute="centerY" secondItem="6ZY-Z7-QGE" secondAttribute="centerY" constant="-146" id="vup-HD-jRt"/>
-                            <constraint firstItem="9Q1-tn-5tT" firstAttribute="top" secondItem="nAa-iS-sfa" secondAttribute="bottom" constant="27" id="yT5-KE-RkO"/>
+                            <constraint firstItem="MiU-9d-IuC" firstAttribute="centerX" secondItem="GhH-Cm-D7R" secondAttribute="centerX" id="1Rv-KS-EIi"/>
+                            <constraint firstItem="MiU-9d-IuC" firstAttribute="centerX" secondItem="9Q1-tn-5tT" secondAttribute="centerX" id="Fxr-fq-Hk5"/>
+                            <constraint firstItem="GhH-Cm-D7R" firstAttribute="top" secondItem="MiU-9d-IuC" secondAttribute="bottom" constant="52" id="Mnz-Y8-yMO"/>
+                            <constraint firstItem="MiU-9d-IuC" firstAttribute="top" secondItem="WGr-SK-RAk" secondAttribute="bottom" constant="26" id="RAN-LE-U5g"/>
+                            <constraint firstItem="rZw-pE-VNZ" firstAttribute="top" secondItem="9Q1-tn-5tT" secondAttribute="bottom" constant="216" id="eN6-ZN-sDK"/>
+                            <constraint firstItem="9Q1-tn-5tT" firstAttribute="top" secondItem="nAa-iS-sfa" secondAttribute="bottom" constant="27" id="hsk-Ga-sDd"/>
+                            <constraint firstItem="MiU-9d-IuC" firstAttribute="centerX" secondItem="6ZY-Z7-QGE" secondAttribute="centerX" id="iV1-1V-OLH"/>
+                            <constraint firstItem="MiU-9d-IuC" firstAttribute="centerX" secondItem="nAa-iS-sfa" secondAttribute="centerX" id="lnR-zF-Lbg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imagePlanetImageView" destination="MiU-9d-IuC" id="6pG-HS-M81"/>
+                        <outlet property="planetDiameterLabel" destination="GhH-Cm-D7R" id="Ta7-Y9-H4l"/>
+                        <outlet property="planetDistanceLabel" destination="9Q1-tn-5tT" id="3ou-Xc-Bww"/>
+                        <outlet property="planetLengthLabel" destination="nAa-iS-sfa" id="7wz-Tr-Qjw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="imF-WM-wdk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

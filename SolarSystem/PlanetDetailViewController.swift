@@ -10,16 +10,29 @@ import UIKit
 
 class PlanetDetailViewController: UIViewController {
     
-    var planetTitle: String?
+    var planet: Planet?
+    
+    @IBOutlet weak var imagePlanetImageView: UIImageView!
+    @IBOutlet weak var planetDiameterLabel: UILabel!
+    @IBOutlet weak var planetLengthLabel: UILabel!
+    @IBOutlet weak var planetDistanceLabel: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let planet = planetTitle {
-            
-            self.navigationItem.title = planet
+        if let planet = planet {
+            updateWithPlanet(planet)
         }
+    }
+    
+    func updateWithPlanet(planet: Planet) {
+        
+        self.navigationItem.title = planet.name
+        imagePlanetImageView.image = UIImage(named: planet.imageName)
+        planetDiameterLabel.text = "\(planet.diameter) km"
+        planetLengthLabel.text = "\(planet.dayLength) hours"
+        planetDistanceLabel.text = "\(planet.millionKMsFromSun) 10^6km"
     }
 
     override func didReceiveMemoryWarning() {
